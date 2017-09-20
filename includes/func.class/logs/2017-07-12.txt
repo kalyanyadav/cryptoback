@@ -1,0 +1,37 @@
+Time : 16:10:21
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'saihub.settings' doesn't exist
+Raw SQL : SELECT * FROM settings WHERE name = :keys
+
+Time : 16:10:20
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'saihub.settings' doesn't exist
+Raw SQL : SELECT * FROM settings WHERE name = :keys
+
+Time : 15:27:39
+SQLSTATE[01000]: Warning: 1265 Data truncated for column 'nominal' at row 1
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','','upgrade','0','2',NOW())
+
+Time : 15:26:52
+SQLSTATE[01000]: Warning: 1265 Data truncated for column 'nominal' at row 1
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','','upgrade','0','2',NOW())
+
+Time : 15:26:21
+SQLSTATE[01000]: Warning: 1265 Data truncated for column 'nominal' at row 1
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','','upgrade','0','2',NOW())
+
+Time : 15:24:31
+SQLSTATE[HY000] [1130] Host '183.82.129.214' is not allowed to connect to this MySQL server
+
+Time : 15:24:30
+SQLSTATE[HY000] [1130] Host '183.82.129.214' is not allowed to connect to this MySQL server
+
+Time : 15:24:14
+SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. 
+
+Time : 15:24:12
+SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. 
+
+Time : 15:24:03
+SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. 
+
+Time : 15:24:00
+SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. 

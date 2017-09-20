@@ -1,0 +1,17 @@
+{
+    "name": "indoweb/binarymlm",
+    "description": "Web Based BINARY MLM",
+    "require": {
+        "silex/silex": "^1.3",
+        "omnipay/paypal": "~2.0",
+        "omnipay/tests": "^2.0",
+        "swiftmailer/swiftmailer": "^5.4",
+        "omnipay/stripe": "^2.3"
+    },
+    "authors": [
+        {
+            "name": "Indowebdeveloper",
+            "email": "contact@indowebdeveloper.com"
+        }
+    ]
+}

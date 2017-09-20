@@ -1,0 +1,147 @@
+Time : 18:51:56
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('1011','-500','upgrade','0',:uid,NOW())
+
+Time : 18:51:19
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','-500','111','0',:uid,NOW())
+
+Time : 18:49:10
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','-500','upgrade','0',:uid,NOW())
+
+Time : 18:48:54
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','-500','upgrade','0',:uid,NOW())
+
+Time : 18:48:29
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','-500','upgrade','0',:uid,NOW())
+
+Time : 18:40:30
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','-500','upgrade','0',:uid,NOW())
+
+Time : 18:40:02
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','-500','upgrade','0',:uid,NOW())
+
+Time : 18:33:45
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:33:37
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:32:45
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:30:07
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:25:37
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:24:02
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:19:52
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:18:49
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:11:37
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:08:24
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','500','upgrade','0',:uid,NOW())
+
+Time : 18:06:56
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO fund_transaction(type,nominal,details,from_id,to_id,date) VALUES('10','500','upgrade','0',:uid,NOW())
+
+Time : 18:05:34
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 18:01:53
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:58:46
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:57:56
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:54:32
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:53:23
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:40:28
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:39:56
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:38:57
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:37:49
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:32:40
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:32:07
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:31:46
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:31:04
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:30:54
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:30:45
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:29:41
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:29:23
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
+
+Time : 17:29:08
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM user_id WHERE uid=:uid AND pin = :pin
