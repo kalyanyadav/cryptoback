@@ -99,12 +99,11 @@ global $menu_array;
 						<section class="panel">
                             <div class="panel-body">
                                 <div class="summary">
-                                    <span>Daily Bonus</span>
-									<form method="POST" action="/transaction/dailybonus">
-									<input type="submit" value="Beginner" class="btn btn-info">
+									<form method="POST" class="col-md-6" action="/transaction/dailybonus">
+									<input type="submit" value="Beginner Bonus" class="btn btn-info">
 									</form>
-									<form method="POST" action="/transaction/dailybonusc">
-									<input type="submit" value="Crypto" class="btn btn-info">
+									<form method="POST" class="col-md-6" action="/transaction/dailybonusc">
+									<input type="submit" value="Crypto Bonus" class="btn btn-success">
 									</form>
                                 </div>
                             </div>
