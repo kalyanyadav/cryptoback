@@ -46,7 +46,7 @@ $tbl .='<thead>
            foreach($data as $key => $value){
                   $tbl .= "<tr>"
                             . "<td>".$value["id"]."</td>"
-                            . "<td>$".$value["nominal"]." ( TO YOUR BANK ) + $".$value["pendregs"]." ( REGISTER FUND )</td>"
+                            . "<td>$".$value["nominal"]." ( TO YOUR BANK )</td>"
                             . "<td>".($value["status"]!="PAID"?"<span class='label label-danger'>PENDING</span>":"<span class='label label-success'>PAID</span>")."</td>"
                             . "<td>".date('F d, Y H:i',strtotime($value["date"]))."</td>"
                             . "<td>".($value["paid_date"]!=""?date('F d, Y H:i',strtotime($value["paid_date"])):" - ")."</td>"

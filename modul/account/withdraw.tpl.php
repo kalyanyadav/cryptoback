@@ -77,8 +77,7 @@
                                         Widthrawal ammount minimum is <strong><?php echo $global_min_wd; ?></strong>
                                     </li>
                                     <li>
-                                        Withdrawal ammount will calculated using this terms. <strong><?php echo $global_wdable; ?>%</strong> will be transferable to your bank account, and <strong><?php echo $global_wdreg; ?>%</strong> will be converted into register fund.
-                                    </li>
+                                        Withdrawal ammount will calculated using this terms. <strong><?php //echo $global_wdable; ?></strong> will be transferable to your bank account. <strong><?php //echo $global_wdreg; ?></strong>
                                 </ol>
                             </p>
                         </div>

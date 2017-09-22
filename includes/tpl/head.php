@@ -10,7 +10,7 @@ global $menu_array;
         <meta name="description" content="mysaiworld.org">
         <meta name="author" content="mysaiworld">
         <link rel="shortcut icon" href="#" type="image/png">
-        <title><?php $hooks->do_action("the_title"); ?> - My Sai World </title>
+        <title><?php $hooks->do_action("the_title"); ?> - Crypto 2 Bank </title>
         
         	<link rel="shortcut icon" href="../favicon.png" />
 
@@ -93,6 +93,25 @@ global $menu_array;
 
                             </div>
                         </section>
+						<?php
+						if($_SESSION["uid"] == 1){
+						?>
+						<section class="panel">
+                            <div class="panel-body">
+                                <div class="summary">
+                                    <span>Daily Bonus</span>
+									<form method="POST" action="/transaction/dailybonus">
+									<input type="submit" value="Beginner" class="btn btn-info">
+									</form>
+									<form method="POST" action="/transaction/dailybonusc">
+									<input type="submit" value="Crypto" class="btn btn-info">
+									</form>
+                                </div>
+                            </div>
+                        </section>
+						<?php
+						}
+						?>
                         <section class="panel">
                             <div class="panel-body">
                                 <div class="summary">

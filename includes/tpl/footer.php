@@ -1,7 +1,7 @@
 <?php global $hooks; ?>
 </div> 
 <footer>
-    <p>Copyright © <?php echo date("Y"); ?> Mysaiworld.</p> 
+    <p>Copyright © <?php echo date("Y"); ?> Crypto 2 Bank.</p> 
 </footer>
 <!--footer section end-->
 

@@ -1,7 +1,0 @@
-Time : 00:57:20
-SQLSTATE[HY000]: General error: 1364 Field 'pin' doesn't have a default value
-Raw SQL : INSERT INTO user_id(uname,password,register_date,role,product) VALUES(:uname,:pass,CURDATE(),'1',:product)
-
-Time : 00:18:00
-SQLSTATE[HY000]: General error: 1364 Field 'pin' doesn't have a default value
-Raw SQL : INSERT INTO user_id(uname,password,register_date,role,product) VALUES(:uname,:pass,CURDATE(),'1',:product)

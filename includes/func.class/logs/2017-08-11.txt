@@ -1,7 +1,0 @@
-Time : 15:36:29
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.uid' in 'where clause'
-Raw SQL : SELECT profileImg FROM user_detail WHERE u.uid=:uid
-
-Time : 15:36:28
-SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.uid' in 'where clause'
-Raw SQL : SELECT profileImg FROM user_detail WHERE u.uid=:uid

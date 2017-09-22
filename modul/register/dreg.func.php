@@ -43,9 +43,21 @@ function have2Leg($uid){
         return false;
     }
 }
+function userProducts($id){
+	global $db;
+    $db->bind('id',$id);
+    $products = $db->query("SELECT product FROM user_id WHERE uid = :id");
+    return $products[0]['product'];
+}
 function thePackage(){
     global $db;
-    $products = $db->query("SELECT * FROM product WHERE disable = 0");
+	$product = userProducts($_SESSION["uid"]);
+	if($product>30){
+		$products = $db->query("SELECT * FROM product WHERE disable = 0 AND product_id > '30'");
+	}
+	else{
+		$products = $db->query("SELECT * FROM product WHERE disable = 0 AND product_id <= '30'");
+	}
     foreach ($products as $key => $value) {
         $product .= "<option value='".$value['product_id']."'>".$value['product_name'].' - $'.$value['value'].'</option>';
     }

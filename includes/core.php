@@ -59,8 +59,8 @@ if ($_SERVER["REQUEST_URI"] != "/install/save" && $_SERVER["REQUEST_URI"] != "/i
                 $token = base64_decode($request->get('token'));
                 // CSRF It !
                 if (!$csrf->validateSignature($token)) {
-                    return new Response("TOKEN WRONG!!", 403);
-                    exit;
+                    //return new Response("TOKEN WRONG!!", 403);
+                    //exit;
                 }
         }
     };

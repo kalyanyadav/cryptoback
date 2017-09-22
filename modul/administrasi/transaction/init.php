@@ -66,6 +66,75 @@ function trx_js() {
 
 function the_trx() {
     global $app;
+	$app->post('/transaction/dailybonus', function(Request $request)  {
+		//echo "test";die;
+        global $db;
+        // EXECUTE
+			$users = $db->query("SELECT * FROM user_id WHERE banned = 0 AND role!=0 AND product <= 30");
+			foreach ($users as $user) {
+				$userId = $user["uid"];
+				$product = $user["product"];
+				$db->bind('id',$product);
+				$products = $db->query("SELECT * FROM product WHERE disable = 0 AND product_id = :id");
+				$dailyBonus = $products[0]["value"]*$products[0]["referral_rate"]/100;
+				$checkBonus = $db->query("SELECT trans_id FROM fund_transaction WHERE DATE(date) = DATE(NOW()) AND type=3 AND to_id = $userId");
+				if(!$checkBonus){
+				$bonusExecute= $db->query("INSERT INTO fund_transaction(date,type,nominal,from_id,details,to_id) VALUES(NOW(),'3',:bonus,:fromx,:infox,:tox)", array("bonus" => $dailyBonus, "fromx" => "0", "infox" => "DAILY BONUS", "tox" => $userId));
+				}
+			}
+			echo "Daily Bonus Executed Successfully - Beginner";
+			?>
+			<script type="text/javascript">
+			alert("Daily Bonus Executed Successfully - Beginner");
+			window.location.href = "/dashboard";
+			</script>
+			<?php
+			die;
+    });
+	$app->post('/transaction/dailybonusc', function(Request $request)  {
+		//echo "test";die;
+        global $db;
+        // EXECUTE
+			$users = $db->query("SELECT * FROM user_id WHERE banned = 0 AND role!=0 AND product > 30");
+			foreach ($users as $user) {
+				$userId = $user["uid"];
+				$product = $user["product"];
+				$db->bind('id',$product);
+				$products = $db->query("SELECT * FROM product WHERE disable = 0 AND product_id = :id");
+				$dailyBonus = $products[0]["value"]*$products[0]["referral_rate"]/100;
+				$checkBonus = $db->query("SELECT trans_id FROM fund_transaction WHERE DATE(date) = DATE(NOW()) AND type=3 AND to_id = $userId");
+				if(!$checkBonus){
+				$bonusExecute= $db->query("INSERT INTO fund_transaction(date,type,nominal,from_id,details,to_id) VALUES(NOW(),'3',:bonus,:fromx,:infox,:tox)", array("bonus" => $dailyBonus, "fromx" => "0", "infox" => "DAILY BONUS", "tox" => $userId));
+				// PREPARE 
+				//$db->bind("userid", $userId);
+				//$db->bind("nominal", $dailyBonus);
+				$bank = $db->query("SELECT bank_id FROM user_bank WHERE uid = $userId");
+				$bankid = $bank[0]["bank_id"];
+				//$db->bind("bank", $bankid);
+				$takenregister = 0;
+				//$db->bind("pendreg", $takenregister);
+				// Record To Withdraw
+				$x = $db->query("INSERT INTO withdrawal(uid,date,nominal,bank_id,status,pendregs) VALUES(:userid,NOW(),:nominal,:bank,'PENDING',:pendreg)", array("userid" => $userId, "nominal" => $dailyBonus, "bank" => $bankid, "pendreg" => $takenregister));
+				$idWithdraw = $db->lastInsertId();
+				if ($idWithdraw && $x) {
+					// PREPARE
+					//$db->bind("takenfund", $dailyBonus);
+					//$db->bind("from", $userId);
+					//$db->bind("notes", "WITHDRAW #" . $idWithdraw);
+					// Record the Transaction
+					$deduct1 = $db->query("INSERT INTO fund_transaction(date,type,nominal,from_id,details,to_id) VALUES(NOW(),8, :takenfund, :from,:notes,0)", array("takenfund" => $dailyBonus, "from" => $userId, "notes" => "WITHDRAW #"));
+				}								
+				}
+			}
+			?>
+			<script type="text/javascript">
+			alert("Daily Bonus Executed Successfully - Crypto");
+			window.location.href = "/dashboard";
+			</script>
+			<?php
+			//header( 'Location: /dashboard' );
+			die;
+    });
     // Fund Balance
     $app->post('/transaction/list', function(Request $request) {
         $curpage = $request->get('page');
@@ -114,8 +183,10 @@ function the_trx() {
         $id = $request->get('id');
         if ($id) {
             $idWithdraw = $id;
-            $owner = wdOwner($id);
-            $pending = pendingWdReg($id);
+            //$owner = wdOwner($id);
+			//$owner = $id;
+			//echo $owner;die;
+            //$pending = pendingWdReg($id);
             $db->bind('id', $id);
             $tgl = date('Y-m-d H:i:s');
             $db->bind('tgl', $tgl);
